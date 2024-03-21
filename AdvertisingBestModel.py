@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import seaborn as sns
+import pickle
 
 st.write("# Advertising Best Model App")
 st.write("This app predicts the **Sales** !")
@@ -8,9 +9,9 @@ st.write("This app predicts the **Sales** !")
 st.sidebar.header('User Input Parameters') #sidebar
 
 def user_input_features():
-    TV = st.sidebar.slider('Tv', 4.3, 7.9, 5.4)
-    Radio = st.sidebar.slider('Radio', 2.0, 4.4, 3.4)
-    Newspaper = st.sidebar.slider('Newspaper', 1.0, 6.9, 1.3)
+    TV = st.sidebar.slider('Tv', 17.2, 230.1, 180.80)
+    Radio = st.sidebar.slider('Radio', 10.8, 45.9, 37.8)
+    Newspaper = st.sidebar.slider('Newspaper', 45.1, 69.3, 58.4)
     data = {'TV': TV, #key:value
             'Radio': Radio,
             'Newspaper': Newspaper,}
